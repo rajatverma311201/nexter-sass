@@ -1,8 +1,8 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
+$color-primary: rgb(221, 153, 35);
+$color-primary-dark: #bb7e38;
 
-$color-secondary: #101d2c;
+$color-secondary: #132539;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -28,6 +28,11 @@ $bp-small: 37.5em; // 600px;
     box-sizing: inherit;
 }
 
+a {
+    // text-decoration: none;
+    color: inherit;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
@@ -47,20 +52,22 @@ body {
 .container {
     display: grid;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
-            6rem,
-            1fr
-        ) [center-start] repeat(
+    grid-template-columns:
+        [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+        [center-start] repeat(
             8,
             [col-start] minmax(min-content, 14rem) [col-end]
-        ) [center-end] minmax(6rem, 1fr) [full-end];
+        )
+        [center-end] minmax(6rem, 1fr) [full-end];
 
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        grid-template-columns:
+            [full-start] minmax(6rem, 1fr) [center-start] repeat(
                 8,
                 [col-start] minmax(min-content, 14rem) [col-end]
-            ) [center-end] minmax(6rem, 1fr) [full-end];
+            )
+            [center-end] minmax(6rem, 1fr) [full-end];
     }
 
     @media only screen and (max-width: $bp-medium) {
